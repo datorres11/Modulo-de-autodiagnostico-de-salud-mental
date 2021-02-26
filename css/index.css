@@ -1,4 +1,41 @@
-.titulo1{
-    color:red;
-    font-size: 200%
+.titulo{
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    height:64px;
+    overflow:hidden;
+    /* Estilo: */
+    text-align:center;
+    background-color: darkcyan;
+    font-size: 400%
+
+}
+
+body{
+    background-color:#81DAF5;
+}
+
+/*Estilos para formulario*/
+.campos{
+    font-size: xx-large;
+    text-align: left;
+    
+}
+
+.formulario{
+    display: flex;
+    align-items: center;
+}
+.etiqueta{
+    font-size: medium;
+}
+
+.alinear{
+    position: absolute;
+    top: 50%;
+    left: 65%;
+    height: 30%;
+    width: 50%;
+    margin: -15% 0 0 -25%;
 }
