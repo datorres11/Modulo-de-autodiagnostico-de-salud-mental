@@ -9,49 +9,97 @@
 </head>
 
 <body>
-    <div class="titulo">
-        Formulario
-    </div>
-    <div class="formulario">
-        <form class="campos" >
-            <div class="alinear">
-                
-                <div>
-                    <label class="etiqueta">Nombre y apellido: </label>
-                    <input type="text" placeholder="Ingrese nombre y apellido...">
-                </div>
-                <div>
-                    <div>
-                        <label class="etiqueta">Telefono: </label>
-                        <input type="number" placeholder="Ingrese telefono...">
-                    </div>
-                    <div >
-                        <label class="etiqueta">Dirección: </label>
-                        <input type="text" placeholder="Ingrese dirección...">
-                    </div>
-                </div>
-
-                <div>
-                    <label class="etiqueta">Fecha: </label>
-                    <input  type="date">
-                </div>
-                
-                <div>
-                    <label class="etiqueta">Email</label>
-                    <input  type="email" placeholder="Ingrese email...">
-                </div>
-
-                <div>
-                    <label class="etiqueta">Contraseña</label>
-                    <input type="password" placeholder="Ingrese contraseña...">
-                </div>
-
-                <div>
-                    <label class="etiqueta">Repetir contraseña</label>
-                    <input type="password" placeholder="confirme contraseña...">
-                </div>
+    <!--Menu principal-->
+    <header>
+        <div id="logo">
+            <img id="img_logo" src="logo.png">
+        </div>
+        <div id="menu">
+            <div id="campo_menu">
+                <nav>
+                    <ul class="nav">
+                        <li><a  href="">Temperatura</a>
+                            <ul>
+                                <li><a href="">Registrar temperatura</a></li>
+                                <li><a href="">Actualizar temperatura</a></li>
+                                <li><a href="">Eliminar temperatura</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
             </div>
-        </form>
+            <div id="campo_menu">
+                <nav>
+                    <ul class="nav">
+                        <li><a href="">Humedad</a>
+                            <ul>
+                                <li><a href="">Registrar humedad</a></li>
+                                <li><a href="">Actualizar humedad</a></li>
+                                <li><a href="">Eliminar humedad</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div id="campo_menu">
+                <nav>
+                    <ul class="nav">
+                        <li><a href="">Ciudades</a>
+                            <ul>
+                                <li><a href="">Registrar ciudad</a></li>
+                                <li><a href="">Eliminar ciudad</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div id="usuario">
+            <div>
+                <a href=""><img id="img_usuario" src="icono_usuario.png"></a>
+            </div>
+            <div>
+                Administrador
+            </div>
+        </div>
+    </header>
+    <!--Barras de progreso representando Temperatudar y humedad-->
+    <div class="container_info">
+        <div class="info_temp">
+            <h1>Temperatura en Bogotá</h1>
+            <span id="grados">55ºF</span>
+            <div id="info_1">Muy nublado</div>
+        </div>
+        <div class="info_temp">
+            <h1>Humedad en Bogotá</h1>
+            <span id="grados">81%</span>
+            <div id="info_1">41% de probabilidad de lluvia</div>
+        </div>
     </div>
+    <br>
+    <div>
+        <h1 class="titulo_grafico"> Grafico Temperatura - Humedad</h1>
+        <div class="container_grafico">
+            <div class="grafico">
+                <div class="container_leyenda">
+                    <span class="leyenda_temp">
+                        <span class="color_temperatura">
+                            <p class="clima">55º Temperatura</p>
+                        </span>
+                    </span>
+                    <div class="container_leyenda"></div>
+                    <span class="leyenda_hum">
+                        <span class="color_humedad">
+                            <p class="clima">81% Humedad</p>
+                        </span>
+                    </span>
+                </div>
+            </div>  
+        </div>
+    </div>
+    <br>
+    <footer>
+
+    </footer>
 </body>
 </html>

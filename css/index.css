@@ -1,41 +1,221 @@
-.titulo{
-    position:absolute;
-    top:0;
-    left:0;
-    right:0;
-    height:64px;
-    overflow:hidden;
-    /* Estilo: */
-    text-align:center;
-    background-color: darkcyan;
-    font-size: 400%
-
-}
-
 body{
-    background-color:#81DAF5;
+    margin: 0;
+    background: linear-gradient(to bottom, #0066cc 0%, #99ccff 100%);
+    height: 100%;
 }
-
-/*Estilos para formulario*/
-.campos{
-    font-size: xx-large;
-    text-align: left;
+header{
+    display: grid;
+    width: 100%;
+    height: 100px;
+    background: black;
+    grid-template-columns: 30% 50% 20% 0% 0%;
+    font-family: 'Arial';
+    font-size: 1rem;
+}
+/*Estilos del Menu principal*/
+#img_logo{
+    width: 100px;
+    height:100px;
     
 }
+#img_usuario{
+    width: 70px;
+    height:70px;
+}
 
-.formulario{
+#logo{
+    text-align: center;
+}
+
+#usuario{
+
+    color: cornsilk;
+    text-align: center;
+}
+
+#menu{
+    display: grid;
+    color: cornsilk;
+    text-align: center;
+    grid-template-columns: 30% 30% 30% 0% 0%;
+}
+
+#campo_menu{
+    line-height: 100px;
+    display: inline-block;
+}
+
+#opcion_principal{
+    text-align:center;
+}
+
+/* Estilos Generales Menu principal*/
+nav ul{
+    list-style: none;
+    padding: 0;
+}
+nav li{
+    line-height: 5em;
+    position: relative;
+}
+nav li ul{
+    display: none;
+    position: absolute;
+}
+
+nav a{
+    color: #ddd;
+    display: block;
+    text-decoration: none;
+    transition: .4%;
+}
+
+nav a:hover{
+    background: rgb(2, 2, 2) ;
+}
+
+nav li:hover ul{
+    display: block;    
+}
+
+
+/*Primer Nivel*/
+
+nav > ul{
+    display: inline-block;
+
+}
+
+nav >ul >li{
+    float: left;
+}
+/*Segundo Nivel*/
+
+nav li li {
+    background: rgb(2, 2, 2);
+    width: 200px;
+
+}
+
+nav >ul >li >ul{
+    top:80%
+}
+
+/*Estilos para Barras de progreso Temperatura y Humedad*/
+
+.container_info{
+    display: grid;
+    width: 80%;
+    font-size: .70rem;
+    font-family: 'Arial';
+    margin-top: 100px;
+    margin-left: 150px;
+    background: linear-gradient(to bottom, #0066cc 0%, #993333 100%);
+    height:195px;
+    border-radius: 10px;
+    border-width: 10px;
+    grid-template-columns: 50% 50% ;
+}
+
+.titulo_grafico{
+    font-size: 1.5rem;
+    font-family: 'Arial';
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+
+h1{
+    margin-left: 50px;
+    color: white;
+}
+
+#grados{
+    font-size: 5rem;
+    margin-left: 50px;
+    font-family: 'Arial';
+    color: white;
+}
+
+#info_1{
+    font-size: 2rem;
+    margin-left: 50px;
+    font-family: 'Arial';
+    color: white;
+}
+#info_2{
+    font-size: 1rem;
+    margin-left: 50px;
+    font-family: 'Arial';
+    color: white;
+}
+
+.info_temp{
+    margin-top: 10px;
+}
+
+:root{
+    --color_temperatura:#cc0000;
+    --color_humedad:#3366ff;
+    --background-color: rgb(15,17,27);
+}
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container_grafico{
+    width: 700px;
+    height: 550px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.grafico{
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background-image: conic-gradient(var(--color_humedad)55%,
+                                      var(--color_temperatura)55% 81%);
+    box-shadow: 1px 1px 5px 1px rgb(70,70,70);
+}
+
+.leyenda_temp{
     display: flex;
     align-items: center;
-}
-.etiqueta{
-    font-size: medium;
+    margin-top: 100px;
+    margin-left:100px
 }
 
-.alinear{
-    position: absolute;
-    top: 50%;
-    left: 65%;
-    height: 30%;
-    width: 50%;
-    margin: -15% 0 0 -25%;
+.leyenda_hum{
+    display: flex;
+    align-items: center;
+    margin-top: 170px;
+    margin-left:250px
+
 }
+
+[class^="color_"]{
+    width: 15px;
+    height: 15px;
+    background-color: var(--color_temperatura);
+    margin-right: 8px;
+    border-radius: 3px;
+}
+
+.color_temperatura{
+    background-color: var(--color_temperatura);
+}
+
+.color_humedad{
+    background-color: var(--color_humedad);
+}
+
+
